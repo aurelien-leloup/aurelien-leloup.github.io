@@ -348,7 +348,7 @@
           var name = $("#name").val() +" "+ $("#L_name").val();
           var email = $("#email").val();
           var message = $("#message").val();
-          window.location.href = "mailto:aurelien.tamasle@gmail.com?subject=Formualaire de contact&body="+message;
+          window.location.href = "mailto:aurelien.tamasle@gmail.com?subject=Formulaire de contact&body="+message;
           formSuccess();
 
         }
