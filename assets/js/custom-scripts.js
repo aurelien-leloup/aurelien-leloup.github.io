@@ -321,10 +321,12 @@
             }
           });
         });
-        
-        
-        
-    /*
+
+    
+        $('#date').text(" Aurélien Leloup, Tous droits réservés, "+new Date().getFullYear());
+
+
+  /*
     |=================
     | CONTACT FORM
     |=================
@@ -346,29 +348,18 @@
           var name = $("#name").val() +" "+ $("#L_name").val();
           var email = $("#email").val();
           var message = $("#message").val();
-
-          Email.send({
-            Host : "in-v3.mailjet.com",
-            Username : "0c66e1e57e6a81d29d3629c03f01aceb",
-            Password : "5bb56ff3a4f42b09e94c2d7f369c8958",
-            To : 'aurelien.tamasle@gmail.com',
-            From : 'aurelien.tamasle@gmail.com',
-            Subject : "Formulaire de contact",
-            Body : "Message de "+name+"<br/> Email : "+email+"<br/>"+message
-        }).then(
-            formSuccess()
-        );
+          window.location.href = "mailto:aurelien.tamasle@gmail.com?subject=Formualaire de contact&body="+message;
+          formSuccess();
 
         }
         function formSuccess(){
             $("#contactForm")[0].reset();
-            submitMSG(true, "Message Envoyé!")
         }
-    	  function formError(){   
-    	    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    	        $(this).removeClass();
-    	    });
-    	  }
+        function formError(){   
+          $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              $(this).removeClass();
+          });
+        }
         function submitMSG(valid, msg){
           if(valid){
             var msgClasses = "h3 text-center fadeInUp animated text-success";
@@ -377,6 +368,10 @@
           }
           $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
         }
+
+
+        
+       
     
 
     
