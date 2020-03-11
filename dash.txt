@@ -1,0 +1,1 @@
+This application is only intended for TESTING purposes. The production version will have real links.
