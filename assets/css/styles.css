@@ -3733,5 +3733,9 @@ BLOG Pagination
   margin-bottom: 30px;
 }
 
+.dropdown-menu {
+  min-width: 3rem;
+}
+
 
 /*# sourceMappingURL=styles.css.map */

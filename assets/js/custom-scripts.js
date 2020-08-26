@@ -324,6 +324,7 @@
 
     
         $('#date').text(" Aurélien Leloup, Tous droits réservés, "+new Date().getFullYear());
+    $('#date-en').text(" Aurélien Leloup, All rights reserved, "+new Date().getFullYear());
 
 
   /*
